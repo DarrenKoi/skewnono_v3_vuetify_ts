@@ -9,6 +9,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+
+    "noImplicitReturns": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+
   }
 }
