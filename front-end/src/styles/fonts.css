@@ -1,0 +1,34 @@
+/**
+ * Noto Sans KR font - Korean subset only (self-hosted)
+ * Only importing Korean subset with woff2 format to minimize bundle size
+ * woff2 is supported by all modern browsers (Chrome 36+, Firefox 39+, Safari 10+, Edge 14+)
+ *
+ * Result: Only 3 font files (400, 500, 700) instead of 6 (woff2 + woff)
+ */
+
+/* noto-sans-kr-korean-400-normal */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('@fontsource/noto-sans-kr/files/noto-sans-kr-korean-400-normal.woff2') format('woff2');
+}
+
+/* noto-sans-kr-korean-500-normal */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('@fontsource/noto-sans-kr/files/noto-sans-kr-korean-500-normal.woff2') format('woff2');
+}
+
+/* noto-sans-kr-korean-700-normal */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('@fontsource/noto-sans-kr/files/noto-sans-kr-korean-700-normal.woff2') format('woff2');
+}

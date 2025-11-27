@@ -93,9 +93,21 @@ Plugins are registered in `src/plugins/index.ts` and loaded in `src/main.ts`:
 
 ### Vuetify Configuration
 - Custom Vuetify styles: `src/styles/settings.scss`
+- Font family: Noto Sans KR (configured in `src/styles/settings.scss`)
 - Auto-import enabled for all Vuetify components
-- Uses Roboto font (weights: 100, 300, 400, 500, 700, 900)
 - Material Design Icons (`@mdi/font`)
+
+### Fonts
+- **Font**: Noto Sans KR (weights: 400, 500, 700)
+- **Loading**: Self-hosted via `@fontsource/noto-sans-kr` package with custom CSS in `src/styles/fonts.css`
+- **Subset**: Korean only (no Latin, Vietnamese, Cyrillic)
+- **Format**: woff2 only (modern browsers, smaller file size)
+- **Result**: Only 3 font files instead of 500+ files
+- **Important**:
+  - Do NOT use `unplugin-fonts` plugin - it bundles all subsets
+  - Do NOT import default CSS files like `@fontsource/noto-sans-kr/400.css` - they include all subsets
+  - Always use custom `@font-face` declarations pointing to specific Korean subset files
+  - File pattern: `@fontsource/noto-sans-kr/files/noto-sans-kr-korean-{weight}-normal.woff2`
 
 ## Project Structure
 ```
